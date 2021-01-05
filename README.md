@@ -4,9 +4,9 @@ This a Capstone project for the Udacity Datascience Nanodegree program.
 ## Table of Contents ##
 1. [Motivation](#motivation)
 2. Data Exploration
-    a. [Types of Offers](#types_of_offers)
-    b. [Customer Demographics](#customer_demographics)
-    c. [Transaction Data](#transaction_data)
+    1. [Types of Offers](#types_of_offers)
+    2. [Customer Demographics](#customer_demographics)
+    3. [Transaction Data](#transaction_data)
 3. [Favorite or Flop](#favorite_or_flop)
 
 ## Motivation<a name="motivation"></a> ##
