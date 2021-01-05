@@ -1,8 +1,16 @@
 # Free Starbucks Cappucino, Anyone? #
 This a Capstone project for the Udacity Datascience Nanodegree program.
 
+## Table of Contents ##
+1. [Motivation](#motivation)
+2. Data Exploration
+    a. [Types of Offers](#types_of_offers)
+    b. [Customer Demographics](#customer_demographics)
+    c. [Transaction Data](#transaction_data)
+3. [Favorite or Flop](#favorite_or_flop)
+
 ## Motivation<a name="motivation"></a> ##
-Starbucks would like to know how its Rewards mobile app users respond to various promotional offers. Who is likely to make a purchase in response to an advertisement? Or a discount offer? Or a BOGO (buy one get one free)? Who is likely to make a purchase even if they don't receive an offer? 
+Starbucks would like to know how its Rewards mobile app users (customers) respond to various promotional offers. Who is likely to make a purchase in response to an advertisement? Or a discount offer? Or a BOGO (buy one get one free)? Who is likely to make a purchase even if they don't receive an offer? 
 
 This project seeks to answer the following specific questions:
 1. Grouping of customers
