@@ -6,7 +6,7 @@ Capstone project for Udacity Datascience Nanodegree
 
 
 
-## Libraries/Packages<a name="libraries_packages"></a>##
+## Libraries/Packages<a name="libraries_packages"></a> ##
 The following python packages are used:
 1. numpy
 2. pandas
