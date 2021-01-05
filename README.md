@@ -14,3 +14,7 @@ The following python packages are used:
 4. matplotlib
 5. tqdm
 6. sklearn
+
+## Authors<a name="authors"></a> ##
+1. [Udacity](http://www.udacity.com) provided the Starbucks data files (portfolio.json; profile.json; transcript.json)
+2. [Ashutosh A. Patwardhan](https://github.com/a1pat) created the Juputer notebook
