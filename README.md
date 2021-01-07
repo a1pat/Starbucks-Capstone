@@ -38,6 +38,7 @@ As seen below, almost all customers identify as either **F** or **M** gender. A 
 ![Gender Distribution](images/gender_distribution.png)
 
 The age distributions for both **F** and **M** customers are skewed to the left. Further, there are relatively more **M** customers in the lower age and income groups than **F** customers.
+
 ![Age Distribution by Gender](images/age_gender_boxplot.png)
 ![Income Distribution by Gender](images/income_gender_boxplot.png)
 
