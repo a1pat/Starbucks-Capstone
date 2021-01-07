@@ -18,6 +18,19 @@ This project seeks to answer the following specific questions:
 3. How well can a model predict which offers are likely to be well received?
 4. Do any customer groups make purchase even if there are no offers?
 
+## Data Exploration ##
+
+### Types of Offers<a name="types_of_offers"></a> ###
+Ten different types of offers are included in the study. Two of the offers are **informational** in nature. Completing an informational offer does not attract any specific reward. The project instructions state that an informational offers can be assumed to be 'influential' for a specified length of time once the app receives the offer. This could be debated - it would be more likely that the influence lasts for a certain period once the the user views the offer. Nevertheless, the project instruction has been honored in this analysis.
+
+There are four of **discount** offers, differing in the minimum amount of money required to be spent (refered to as **difficulty**) to earn a reward, the amount of reward (refered to as **reward**) and the validity period (refered to as **duration**) of the offer.
+
+Finally, there are four **bogo** (buy one get one free) offers. These, vary in difficulty and duration. The reward for a bogo offer is, of course, the same as the diffuculty.
+
+![Offer Attributes Summary](images/offer_summary.png)
+
+Each offer is made to customers through one or more channels (mobile, social, web, email). The mobile app data available is available, per the project instructions. Accordingly, channel effects are not considered in this analysis.
+
 ## Libraries/Packages<a name="libraries_packages"></a> ##
 The following python packages are used:
 1. numpy
