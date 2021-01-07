@@ -31,7 +31,7 @@ Finally, there are four **bogo** (buy one get one free) offers. These, vary in d
 
 Each offer is made to customers through one or more channels (mobile, social, web, email). The mobile app data available is available, per the project instructions. Accordingly, channel effects are not considered in this analysis.
 
-### Customer Demographics ## <a name="customer_demographics"></a> ###
+### Customer Demographics ### <a name="customer_demographics"></a>
 The customer data set includes 17,000 mobile app customers. Age, income and gender are available for 14,825 customers (missing for 2,175 - approximately 13% - of all customers), while the membership date is available for all customers in the data set.
 
 As seen below, almost all customers identify as either **F** or **M** gender. A very small portion of customers (1.4%) identify as **O** gender. The numbers of **F** and **M** customers is comparable and should not affect models based on gender, *but the very small fraction of **O** customers could cause models to ignore any age/income/membership year relationships characteristic of the **O** gender.*
