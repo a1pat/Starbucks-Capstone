@@ -31,6 +31,26 @@ Finally, there are four **bogo** (buy one get one free) offers. These, vary in d
 
 Each offer is made to customers through one or more channels (mobile, social, web, email). The mobile app data available is available, per the project instructions. Accordingly, channel effects are not considered in this analysis.
 
+### Customer Demographics ## <a name="customer_demographics"></a> ###
+The customer data set includes 17,000 mobile app customers. Age, income and gender are available for 14,825 customers (missing for 2,175 - approximately 13% - of all customers), while the membership date is available for all customers in the data set.
+
+As seen below, almost all customers identify as either **F** or **M** gender. A very small portion of customers (1.4%) identify as **O** gender. The numbers of **F** and **M** customers is comparable and should not affect models based on gender, *but the very small fraction of **O** customers could cause models to ignore any age/income/membership year relationships characteristic of the **O** gender.*
+![Gender Distribution](images/gender_distribution.png)
+Gender Distribution.
+
+The age distributions for both **F** and **M** customers are skewed to the left. Further, there are relatively more **M** customers in the lower age and income groups than **F** customers.
+![Age Distribution by Gender](images/age_gender_boxplot.png)
+Age Distribution by Gender.
+
+![Income Distribution by Gender](images/income_gender_boxplot.png)
+Income Distribution by Gender.
+
+Most of the customers in the study (63%) became (Rewards club) members in 2017 and 2018. The number of joiners declines rapidly as we go back in time. *Consequently, models may perform better with later joiners than early joiners.* Age, income and gender are missing for 4% of customers who became members in 2013 and 2014 and for roughly 13% of customers who joined after 2014. This is expected to slightly restore some balance. The lower number of 2018 joiners is presumably because the study was conducted in mid 2018.
+![Membership Year Distribution](images/membership_year_distribution.png)
+Membership Year Distribution.
+
+
+
 ## Libraries/Packages<a name="libraries_packages"></a> ##
 The following python packages are used:
 1. numpy
