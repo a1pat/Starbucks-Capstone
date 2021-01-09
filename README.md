@@ -75,8 +75,29 @@ Two popular methods are used to determine groups - PCA and K-Means, both using t
 
 The following featue set is employed: ['age','income','M','F','O','became_member_year']. 'M', 'F' and 'O' are categorical variables derived from *gender*. 'became_member_year' is derived from 'became_member_on'.
 
-PCa The scikit-learn package is used for both.
 ### PCA <a name="pca"></a> ###
+Following scaling with sciket-learn's StandardScaler(), PCA shows that five principal components account for all the variation in the data set. This is not surprising since the three gender-related categorical variables are not linearly independent. The first principal component explains about 27% of the variation in the data, the next three principal components each explain about 20% of the variation, and the fifth principal component explains the balance. Five principal components have to be retained to explain the data adequately.
+![Singular Values](images/singular_values.png)
+
+The loading matrix tells us how much each variable contributes to each principal component. It is shown below and is interpreted as follows:
+['M','F','O']
+
+1. **First principal component** (PC0, blue bars): **M* and **F** are the largest blue bars. They are in opposite directions, meaning that a customer can be either **M** or **F** (of course). The **age** and **income** bars are smaller and the same sign as the **F** bar. This means that **F** gender has slightly above-average age and income while **M** gender has slightly below-average age and income. This is consistent with earlier observations in the [Customer Demographics](#customer_demographics) section. **O** gender and **became_member_year** have no contribution to this principal component;
+2. **Second principal component** (PC1, orange bars): This primarily shows that **age** and **income** vary together (positive correlation). To a lesser extent, lower **age** and **income** are associated with **F**, that is, there are **F**s with lower than average **age** and **income** and **M**s with above average **age** and **income**, but this is a secondary effect. It also shows that **O** gender generally has above-average **age** and **income**. To an even smaller extent, **F**s and **O**s joined relatively later while there are more **M**s among the early joiners;
+3. **Third principal component** (PC2, green bars): primary contribution is from belonging to the **O** gender with very slightly above-average **age** and **income** and somewhat later joiners;
+4. **Fourth principal component** (PC3, red bars): These are the very early joiners, not from any particular gender, with mostly average **age** and **income**;
+5. **Fifth principal component** (PC4, purple bars): The are the higher **income** lower **age** (and vice versa) customers acrosss all genders and vintages.
+
+Another nice way to visualize the above information is to plot make a scatter plot of two principal components' loading vectors, as shown below:
+![PC0 Loadings vs PC1 Loadings](images/pc0_pc1_loadings_scatter.png)
+![PC0 Loadings vs PC2 Loadings](images/pc0_pc2_loadings_scatter.png)
+![PC1 Loadings vs PC2 Loadings](images/pc1_pc2_loadings_scatter.png)
+Observing which points are next to each other versus opposite each other relative to the origin:
+1. **F** and **M** are opposites;
+2. **Age** (blue dot) and **income** (orange dot) largely vary together, and somehwat opposite to **became_member_year**;
+3. **O** gender are late joiners,
+consistent with the first three principal components in the loadings bar chart.
+
 
 
 ### K-Means <a name="k_means"></a> ###
