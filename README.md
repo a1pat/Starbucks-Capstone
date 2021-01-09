@@ -81,7 +81,7 @@ Following scaling with sciket-learn's StandardScaler(), PCA shows that five prin
 
 The loading matrix tells us how much each variable contributes to each principal component. It is shown below and is interpreted as follows:
 
-![Loadings](image/loadings.png)
+![Loadings](images/loadings.png)
 
 1. **First principal component** (PC0, blue bars): **M* and **F** are the largest blue bars. They are in opposite directions, meaning that a customer can be either **M** or **F** (of course). The **age** and **income** bars are smaller and the same sign as the **F** bar. This means that **F** gender has slightly above-average age and income while **M** gender has slightly below-average age and income. This is consistent with earlier observations in the [Customer Demographics](#customer_demographics) section. **O** gender and **became_member_year** have no contribution to this principal component;
 2. **Second principal component** (PC1, orange bars): This primarily shows that **age** and **income** vary together (positive correlation). To a lesser extent, lower **age** and **income** are associated with **F**, that is, there are **F**s with lower than average **age** and **income** and **M**s with above average **age** and **income**, but this is a secondary effect. It also shows that **O** gender generally has above-average **age** and **income**. To an even smaller extent, **F**s and **O**s joined relatively later while there are more **M**s among the early joiners;
@@ -99,6 +99,7 @@ Observing which points are next to each other versus opposite each other relativ
 1. **F** and **M** are opposites;
 2. **Age** (blue dot) and **income** (orange dot) largely vary together, and somehwat opposite to **became_member_year**;
 3. **O** gender are late joiners,
+
 consistent with the first three principal components in the loadings bar chart.
 
 
