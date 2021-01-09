@@ -1,4 +1,4 @@
-# Free Starbucks Cappucino, Anyone? #
+# Free Cappucino, Anyone? #
 This a Capstone project for the Udacity Datascience Nanodegree program.
 
 ## Table of Contents ##
