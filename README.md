@@ -7,7 +7,10 @@ This a Capstone project for the Udacity Datascience Nanodegree program.
     1. [Types of Offers](#types_of_offers)
     2. [Customer Demographics](#customer_demographics)
     3. [Transaction Data](#transaction_data)
-3. [Favorite or Flop](#favorite_or_flop)
+3. [Demographic Groups](#demographic_groups)
+    1. [PCA](#pca)
+    2. [K-Means](#k_means)
+4. [Favorite or Flop](#favorite_or_flop)
 
 ## Motivation<a name="motivation"></a> ##
 Starbucks would like to know how its Rewards mobile app users (customers) respond to various promotional offers. Who is likely to make a purchase in response to an advertisement? Or a discount offer? Or a BOGO (buy one get one free)? Who is likely to make a purchase even if they don't receive an offer? 
@@ -49,6 +52,25 @@ Crossplots show behavior that may point to data collection issues:
 ![Income versus Age](images/income_versus_age_scatter.png)
 ![Income by Membership Year](images/income_by_year_boxplot.png)
 The stair-step behavior of maximum income versus age is strange. While younger customers may well have lower average income is lower, their income distribution would probably have some samples in higher income ranges. Is it due to how the customer set was chosen for the study? The box plot shows no customers who signed up in 2013 and 2014 had income above $100,000. Perhaps the membership application did not provide the option to indicate a higher income? While the reasons for this unexpected behavior are not known with certainty, it could certainly impact model performance.
+
+### Transaction Data <a name="transaction_data"></a> ###
+Data for 306,534 transactions is provided in the transcript.json file. A transaction is a record of a purchase made via the app, or a record of an offer being received, viewed or completed via the app. A total of 76,277 offers were sent to 17,000 customers. Most customers received at least five offers, while some customers received as many as six offers. Each customer received at least one offer. Approximately 7,600 of each of the ten types of offers were sent out. Each offer was sent (received) at each of the following times: 0, 168, 336, 408, 504 and 576 though not to each customer. The last transaction is timestamped 714 - this is the end of the test, but not all offers expired by this time. Thus, some offers may have been viewed and completed after the test ended, and were not necessarily unsuccessful. In fact, each offer could have one of the outcomes shown in the following figure:
+![Outcomes](images/outcome_tree.png)
+The outcomes are defined as follows:
+1. Successful: the offer is viewed before completion, and completed before expiration;
+2. Unsuccessful: the offer is viewed but not completed before expiration; expiration is within the duration of the test;
+3. Inconclusive: the offer is viewed but not completed within the test period; expiration is after the end of the test period;
+4. Lost: the offer was not viewed within the test period;
+5. Uncolicited: this is actually not an outcome of a received offer, but a purchase unrelated to an offer.
+Classifying each offer/transaction according to the above scheme is important for assessing each offer. *It is also time consuming.* A flag (**read_saved_person_offer**) in the code can be set to True the first time the code is run to perform the categorization. The results are saved to a pickle file. The flag can be set to False during subsequent runs - this reads the categorization from the pickle file and saves time.
+
+## Demographic Groups<a name="demographic_groups"></a> ##
+
+### PCA <a name="pca"></a> ###
+
+
+### K-Means <a name="k_means"></a> ###
+
 
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
