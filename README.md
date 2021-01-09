@@ -49,6 +49,7 @@ Most of the customers in the study (63%) became (Rewards club) members in 2017 a
 ![Membership Year Distribution](images/membership_year_distribution.png)
 
 Crossplots show behavior that may point to data collection issues:
+
 ![Income versus Age](images/income_versus_age_scatter.png)
 ![Income by Membership Year](images/income_by_year_boxplot.png)
 The stair-step behavior of maximum income versus age is strange. While younger customers may well have lower average income is lower, their income distribution would probably have some samples in higher income ranges. Is it due to how the customer set was chosen for the study? The box plot shows no customers who signed up in 2013 and 2014 had income above $100,000. Perhaps the membership application did not provide the option to indicate a higher income? While the reasons for this unexpected behavior are not known with certainty, it could certainly impact model performance.
@@ -56,6 +57,7 @@ The stair-step behavior of maximum income versus age is strange. While younger c
 ### Transaction Data <a name="transaction_data"></a> ###
 Data for 306,534 transactions is provided in the transcript.json file. A transaction is a record of a purchase made via the app, or a record of an offer being received, viewed or completed via the app. A total of 76,277 offers were sent to 17,000 customers. Most customers received at least five offers, while some customers received as many as six offers. Each customer received at least one offer. Approximately 7,600 of each of the ten types of offers were sent out. Each offer was sent (received) at each of the following times: 0, 168, 336, 408, 504 and 576 though not to each customer. The last transaction is timestamped 714 - this is the end of the test, but not all offers expired by this time. Thus, some offers may have been viewed and completed after the test ended, and were not necessarily unsuccessful. In fact, each offer could have one of the outcomes shown in the following figure:
 ![Outcomes](images/outcome_tree.png)
+
 The outcomes are defined as follows:
 1. Successful: the offer is viewed before completion, and completed before expiration;
 2. Unsuccessful: the offer is viewed but not completed before expiration; expiration is within the duration of the test;
