@@ -10,7 +10,8 @@ This a Capstone project for the Udacity Datascience Nanodegree program.
 3. [Demographic Groups](#demographic_groups)
     1. [PCA](#pca)
     2. [K-Means](#k_means)
-4. [Favorite or Flop](#favorite_or_flop)
+4. [Potential Gotchas](#potential_gotchas)
+5. [Fave or Flop](#fave_or_flop)
 
 ## Motivation<a name="motivation"></a> ##
 Starbucks would like to know how its Rewards mobile app users (customers) respond to various promotional offers. Who is likely to make a purchase in response to an advertisement? Or a discount offer? Or a BOGO (buy one get one free)? Who is likely to make a purchase even if they don't receive an offer? 
