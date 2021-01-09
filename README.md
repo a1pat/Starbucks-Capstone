@@ -69,7 +69,7 @@ The outcomes are defined as follows:
 Classifying each offer/transaction according to the above scheme is important for assessing each offer. *It is also time consuming.* A flag (**read_saved_person_offer**) in the code can be set to True the first time the code is run to perform the categorization. The results are saved to a pickle file. The flag can be set to False during subsequent runs - this reads the categorization from the pickle file and saves time.
 
 ## Demographic Groups<a name="demographic_groups"></a> ##
-Customer data (from profile.json) were analyzed to determine if there were any natural demographic groups. Missing rows were dropped and all the remaining rows were used for this analysis. The goal was not to predict the group of future/unknown customers, hence separation into training and test sets was necessary. Such separation may be required in future if such prediction is contemplated.
+Customer data (from profile.json) are analyzed to determine if there are any natural demographic groups. Missing rows are dropped and all the remaining rows are used for this analysis. The goal is not to predict the group of future/unknown customers, hence separation into training and test sets is necessary. Such separation may be required in future if such prediction is contemplated.
 
 Two popular methods are used to determine groups - PCA and K-Means, both using the scikit-learn package.
 
