@@ -52,6 +52,7 @@ Crossplots show behavior that may point to data collection issues:
 
 ![Income versus Age](images/income_versus_age_scatter.png)
 ![Income by Membership Year](images/income_by_year_boxplot.png)
+
 The stair-step behavior of maximum income versus age is strange. While younger customers may well have lower average income is lower, their income distribution would probably have some samples in higher income ranges. Is it due to how the customer set was chosen for the study? The box plot shows no customers who signed up in 2013 and 2014 had income above $100,000. Perhaps the membership application did not provide the option to indicate a higher income? While the reasons for this unexpected behavior are not known with certainty, it could certainly impact model performance.
 
 ### Transaction Data <a name="transaction_data"></a> ###
