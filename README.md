@@ -128,6 +128,8 @@ Gender remains the primary differentiator as the number of K-Means clusters is i
 
 The **inertia** (sum of square of the distance from each point to its cluster center) is often used to determine the appropriate number of clusters. As seen below, there is no sharp 'elbow' in a plot of intertia versus number of clusters. We will arbitrarily use five clusters in the remainder of this project.
 
+![Inertia](images/inertia.png)
+
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
 The following python packages are used:
