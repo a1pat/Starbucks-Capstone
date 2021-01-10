@@ -105,7 +105,28 @@ consistent with the first three principal components in the loadings bar chart.
 
 
 ### K-Means <a name="k_means"></a> ###
+The K-Means algorithm separates the data into the specified (K) number of clusters, and yields the value of each feature that is 'central' to each cluster. As a reminder, the features are **age**, **income**, **M**, **F**, **O** and **became_member_year**. Let us see what happens when we specify different numbers of clusters.
 
+The following chart shows the mean value of each feature at the cluster center. 
+
+![2 Clusters](images/cluster_centers_2.png)
+
+The two clusters are primarily differentiated by **F** (blue bars) or **M** (orange bars). The **F** group has slightly-above-average age and income. The age and income of the **M** group is slightly below average. The membership year is not relevant. 
+
+Jumping ahead to five clusters, the cluster membership is as follows (the red bar for Cluster #3 makes it a little difficult to read the chart):
+
+![5 Clusters](images/cluster_centers_5.png)
+1. **Cluster 1** (blue bars): contains **F**. The average age and income of this cluster are well above average;
+2. **Cluster 2** (orange bars): contains **M**. The average age and income are slightly below average, and members are late joiners;
+3. **Cluster 3** (green bars): members are **F**, this time with below-average age and income;
+4. **Cluster 4** (red bars): stands out as having **O** members. Other features are not prominent in this cluster;
+5. **Cluster 5** (purple bars): the membership is characterized by being of **F** gender and early joiners.
+
+This is remarkably consistent with the groups arising from PCA.
+
+Gender remains the primary differentiator as the number of K-Means clusters is increased further, but finer distinctions are drawn along age, income and became_member_year lines.
+
+The **inertia** (sum of square of the distance from each point to its cluster center) is often used to determine the appropriate number of clusters. As seen below, there is no sharp 'elbow' in a plot of intertia versus number of clusters. We will arbitrarily use five clusters in the remainder of this project.
 
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
