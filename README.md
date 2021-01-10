@@ -126,7 +126,7 @@ This is remarkably consistent with the groups arising from PCA.
 
 Gender remains the primary differentiator as the number of K-Means clusters is increased further, but finer distinctions are drawn along age, income and became_member_year lines.
 
-The **inertia** (sum of square of the distance from each point to its cluster center) is often used to determine the appropriate number of clusters. As seen below, there is no sharp 'elbow' in a plot of intertia versus number of clusters. We will arbitrarily use five clusters in the remainder of this project.
+The **inertia** (sum of square of the distance from each point to its cluster center) is often used to determine the appropriate number of clusters. As seen below, there is no sharp 'elbow' in a plot of intertia versus number of clusters. **We will use five clusters in the remainder of this project**.
 
 ![Inertia](images/inertia.png)
 
