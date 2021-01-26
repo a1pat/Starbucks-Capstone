@@ -25,7 +25,7 @@ This project seeks to answer the following specific questions:
 ## Data Exploration ##
 
 ### Types of Offers<a name="types_of_offers"></a> ###
-Ten different types of offers are included in the study. Two of the offers are **informational** in nature. Completing an informational offer does not attract any specific reward. The project instructions state that an informational offers can be assumed to be 'influential' for a specified length of time once the app receives the offer. This could be debated - it would be more likely that the influence lasts for a certain period once the the user views the offer. Nevertheless, the project instruction has been honored in this analysis.
+Ten different types of offers are included in the study. Two of the offers are **informational** in nature. Completing an informational offer does not earn a reward. The project instructions state that an informational offers can be assumed to be 'influential' for a specified length of time once the app receives the offer. This could be debated - it would be more likely that the influence lasts for a certain period once the the user views the offer. Nevertheless, the project instruction has been honored in this analysis.
 
 There are four of **discount** offers, differing in the minimum amount of money required to be spent (refered to as **difficulty**) to earn a reward, the amount of reward (refered to as **reward**) and the validity period (refered to as **duration**) of the offer.
 
@@ -61,11 +61,11 @@ Data for 306,534 transactions is provided in the transcript.json file. A transac
 ![Outcomes](images/outcome_tree.png)
 
 The outcomes are defined as follows:
-1. Successful: the offer is viewed before completion, and completed before expiration;
-2. Unsuccessful: the offer is viewed but not completed before expiration; expiration is within the duration of the test;
-3. Inconclusive: the offer is viewed but not completed within the test period; expiration is after the end of the test period;
-4. Lost: the offer was not viewed within the test period;
-5. Unsolicited: this is a purchase made without receiving an offer, without viewing a received offer, or viewing and offer but making the purchase after offer expiration.
+1. **Successful**: the offer is viewed before completion, and completed before expiration;
+2. **Unsuccessful**: the offer is viewed but not completed before expiration; expiration is within the duration of the test;
+3. **Inconclusive**: the offer is viewed but not completed within the test period; expiration is after the end of the test period;
+4. **Lost**: the offer was not viewed within the test period;
+5. **Unsolicited**: this is a purchase made without receiving an offer, without viewing a received offer, or viewing and offer but making the purchase after offer expiration.
 
 Classifying each offer/transaction according to the above scheme is important for assessing each offer. *It is also time consuming.* A flag (**read_saved_person_offer**) in the code can be set to True the first time the code is run to perform the categorization. The results are saved to a pickle file. The flag can be set to False during subsequent runs - this reads the categorization from the pickle file and saves time.
 
@@ -81,7 +81,7 @@ Two popular methods are used to determine groups - PCA and K-Means, both using t
 The following featue set is employed: ['age','income','M','F','O','became_member_year']. 'M', 'F' and 'O' are categorical variables derived from *gender*. 'became_member_year' is derived from 'became_member_on'.
 
 ### PCA <a name="pca"></a> ###
-Following scaling with sciket-learn's StandardScaler(), PCA shows that five principal components account for all the variation in the data set. This is not surprising since the three gender-related categorical variables are not linearly independent. The first principal component explains about 27% of the variation in the data, the next three principal components each explain about 20% of the variation, and the fifth principal component explains the balance. Five principal components have to be retained to explain the data adequately.
+Following scaling with scikit-learn's StandardScaler(), PCA shows that five principal components account for all the variation in the data set. This is not surprising since the three gender-related categorical variables are not linearly independent. The first principal component explains about 27% of the variation in the data, the next three principal components each explain about 20% of the variation, and the fifth principal component explains the balance. Five principal components have to be retained to explain the data adequately.
 ![Singular Values](images/singular_values.png)
 
 The loading matrix tells us how much each variable contributes to each principal component. It is shown below and is interpreted as follows:
@@ -110,7 +110,7 @@ consistent with the first three principal components in the loadings bar chart.
 
 
 ### K-Means <a name="k_means"></a> ###
-The K-Means algorithm separates the data into the specified (K) number of clusters, and yields the value of each feature that is 'central' to each cluster. As a reminder, the features are **age**, **income**, **M**, **F**, **O** and **became_member_year**. Let us see what happens when we specify different numbers of clusters.
+The K-Means algorithm separates the data into the specified (K) number of clusters, and yields the cluster centers. As a reminder, the features are **age**, **income**, **M**, **F**, **O** and **became_member_year**. Let us see what happens when we specify different numbers of clusters.
 
 The following chart shows the mean value of each feature at the cluster center. 
 
@@ -118,7 +118,7 @@ The following chart shows the mean value of each feature at the cluster center.
 
 The two clusters are primarily differentiated by **F** (blue bars) or **M** (orange bars). The **F** group has slightly-above-average age and income. The age and income of the **M** group is slightly below average. The membership year is not relevant. 
 
-Jumping ahead to five clusters, the cluster membership is as follows (the red bar for Cluster #3 makes it a little difficult to read the chart):
+Jumping ahead to five clusters, the cluster membership is as follows:
 
 ![5 Clusters](images/cluster_centers_5.png)
 1. **Cluster 1** (blue bars): contains **F**. The average age and income of this cluster are well above average;
@@ -146,5 +146,5 @@ The following python packages are used:
 6. sklearn
 
 ## Authors<a name="authors"></a> ##
-1. [Udacity](http://www.udacity.com) provided the Starbucks data files (portfolio.json; profile.json; transcript.json)
-2. [Ashutosh A. Patwardhan](https://github.com/a1pat) created the Juputer notebook
+1. [Udacity](http://www.udacity.com) provided the Starbucks data files (portfolio.json; profile.json; transcript.json);
+2. [Ashutosh A. Patwardhan](https://github.com/a1pat) did the data exploration, cleaning, modeling/classification and created the Juputer notebook.
