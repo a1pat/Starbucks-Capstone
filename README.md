@@ -70,6 +70,7 @@ The outcomes are defined as follows:
 Classifying each offer/transaction according to the above scheme is important for assessing each offer. *It is also time consuming.* A flag (**read_saved_person_offer**) in the code can be set to True the first time the code is run to perform the categorization. The results are saved to a pickle file. The flag can be set to False during subsequent runs - this reads the categorization from the pickle file and saves time.
 
 There is an issue with how the transcations are labeled in the transcript file, as illustrated by the following person's transactions. Check the events from t=504 onwards (the events prior to this are labeled correctly). There are two offers markerd as completed at t=600. Between them, these offers have a combined difficulty of $15. Yet, there is only one transaction at t=600 for $11.26. Thus the two offers could not have both been completed. There is a problem with at least some of the offers being marked as completed. The 'offer completed' tags must be re-done for this and all other persons.
+
 ![Incorrect completion](images/incorrect_completion.png)
 
 ## Demographic Groups<a name="demographic_groups"></a> ##
