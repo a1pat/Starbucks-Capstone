@@ -77,6 +77,8 @@ There is an issue with how the transcations are labeled in the transcript file, 
 
 ![Incorrect completion](images/incorrect_completion.png)
 
+As a quality check of the catehorization logic and code, it was verified that each offer received by each person falls into one and only one of the possible outcomes - successful, unsuccessful, unsolicited, inconclusive, lost;
+
 ## Demographic Groups<a name="demographic_groups"></a> ##
 Customer data (from profile.json) are analyzed to determine if there are any natural demographic groups. Missing rows are dropped and all the remaining rows are used for this analysis. The goal is not to predict the group of future/unknown customers, hence separation into training and test sets is necessary. Such separation may be required in future if such prediction is contemplated.
 
@@ -138,6 +140,14 @@ Gender remains the primary differentiator as the number of K-Means clusters is i
 The **inertia** (sum of square of the distance from each point to its cluster center) is often used to determine the appropriate number of clusters. As seen below, there is no sharp 'elbow' in a plot of intertia versus number of clusters. **We will use five clusters in the remainder of this project**.
 
 ![Inertia](images/inertia.png)
+
+## Potential Gotchas<a name="potential_gotchas"></a> ##
+
+## Fave or Flop<a name="fave_or_flop"></a> ##
+
+The overall success rates for each of the offers is shown below.
+![Success Rates](images/offer_success_rate.png)
+
 
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
