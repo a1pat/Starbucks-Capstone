@@ -147,6 +147,9 @@ The **inertia** (sum of square of the distance from each point to its cluster ce
 
 The overall success rates for each of the offers is shown below.
 ![Success Rates](images/offer_success_rate.png)
+1. Overall, fafd and 2298 are the two most-successful offers. Both are discount offers. Except for <font color='red'>3207</font>, the two least successful offers are also discount offers - 0b1e and 2906. It appears that the combination of low difficulty and high reward (2298) makes for a high success. High difficulty (0b1e) makes for a low success rate. Other things being equal, longer duration (fafd) makes for greater success than shorter duration (2906).
+2. With bogo offers, the relationship between success and offer parameters is not clear cut. For instance, the most successful bogo (f194) has low difficulty but short duration, while the least successful bogo (9b98) has the same low difficulty, but a longer duration.
+3. The  informational offer with shorter duration (3207) saw low success, while the one with slightly longer duration (5a8b) saw moderate success.
 
 
 
