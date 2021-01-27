@@ -159,6 +159,9 @@ Next, we will look in detail at how the offers did among different genders, age 
 **Breakdown by gender and age**:
 ![Gender Age breakdown](images/success_age_gender.png)
 
+**Breakdown by membership year**:
+![Year breakdown](images/success_year.png)
+
 **Breakdown by cluster**:
 ![Cluster breakdown](images/success_cluster.png)
 
