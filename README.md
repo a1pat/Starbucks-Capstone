@@ -10,8 +10,8 @@ This a Capstone project for the Udacity Datascience Nanodegree program.
 3. [Demographic Groups](#demographic_groups)
     1. [PCA](#pca)
     2. [K-Means](#k_means)
-4. [Potential Gotchas](#potential_gotchas)
-5. [Fave or Flop](#fave_or_flop)
+4. [Fave or Flop](#fave_or_flop)
+5. [Potential Gotchas](#potential_gotchas)
 
 ## Motivation<a name="motivation"></a> ##
 Starbucks would like to know how its Rewards mobile app users (customers) respond to various promotional offers. Who is likely to make a purchase in response to an advertisement? Or a discount offer? Or a BOGO (buy one get one free)? Who is likely to make a purchase even if they don't receive an offer? 
@@ -141,8 +141,6 @@ The **inertia** (sum of square of the distance from each point to its cluster ce
 
 ![Inertia](images/inertia.png)
 
-## Potential Gotchas<a name="potential_gotchas"></a> ##
-
 ## Fave or Flop<a name="fave_or_flop"></a> ##
 
 The overall success rates for each of the offers is shown below.
@@ -169,6 +167,18 @@ Next, we will look in detail at how the offers did among different genders, age 
 | **Breakdown by cluster**: |
 | :------ |
 | ![Cluster breakdown](images/success_cluster.png) |
+
+
+## Potential Gotchas<a name="potential_gotchas"></a> ##
+The following, some of which have been noted above, could affect the perfoemance of the classifiers that are developed in the next section:
+1. Income data appears to be capped at $100,000 for customers who joined the rewards club in 2013 and 2014. It may be an atrifact of the way the data was collected. If there wer customers with higher incomes who could only enter a maximum of $100,000, it will affect classifier fitting;
+2. Income data was likely collected at te time of joining the club and not subsequently updated. The early joiners likely had significantly higher incomes at the time the transaction data were collected. Others may have retired and have lower incomes than at joining. These factors will affect classifier fitting;
+3. The stair-step nature of the income versus age plot is puzzling. Is there some underlying issue?
+4. For 2015 and later joiners, the maximum income is $120,000. Is this also an artifact of the data collection process? There must be Starbucks customers who have higher incomes. Their higher spending habits lumped with lower spenders could affect the classifier. Perhaps Starbucks has observed that customers with incomes higher than $120,000 tend to spend the same as those with income of $120,000;
+5. Like income, age must have been provided at the time of membership. It is assumed that Starbucks has automatically updated the age to the correct number at the time of the study (should have been easy);
+6. The O-gender sample is much smaller than the F- and M-gender. The classifier could end up being more weighted towards the F- and M-genders;
+7. There are relatively few members who joined in 2013-2015 and 2018 (perhaps the study was conducted in the middle of 2018). This could bias the classifier to predict 2016 and 2017 customers better;
+8. Age, income and gender data are missing for roughly 13% of the customers. This is not a small portion of the data set. Will this introduce any sort of bias? Is a certain type of customer reluctant to provide personal details? Perhaps the data was just lost in a random fashion and it is not an issue...
 
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
