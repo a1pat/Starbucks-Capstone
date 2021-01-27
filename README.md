@@ -12,6 +12,9 @@ This a Capstone project for the Udacity Datascience Nanodegree program.
     2. [K-Means](#k_means)
 4. [Fave or Flop](#fave_or_flop)
 5. [Potential Gotchas](#potential_gotchas)
+6. [Classifiers](#classifiers)
+    1. [Offer Classifiers](#offer_classifiers)
+    2. [Global Classifier](#global_classifier)
 
 ## Motivation<a name="motivation"></a> ##
 Starbucks would like to know how its Rewards mobile app users (customers) respond to various promotional offers. Who is likely to make a purchase in response to an advertisement? Or a discount offer? Or a BOGO (buy one get one free)? Who is likely to make a purchase even if they don't receive an offer? 
@@ -180,6 +183,26 @@ The following, some of which have been noted above, could affect the perfoemance
 7. There are relatively few members who joined in 2013-2015 and 2018 (perhaps the study was conducted in the middle of 2018). This could bias the classifier to predict 2016 and 2017 customers better;
 8. Age, income and gender data are missing for roughly 13% of the customers. This is not a small portion of the data set. Will this introduce any sort of bias? Is a certain type of customer reluctant to provide personal details? Perhaps the data was just lost in a random fashion and it is not an issue...
 
+
+## Classifiers<a name="classifiers"></a> ##
+
+### Offer Classifiers <a name="offer_classifiers"></a> ###
+A classifier was fit to each of the ten offers to predict whether the offer would be successful for each customer. The feature set consisted of age, income, M, F, O and membership year. M, F and O are categorical variables for the customer's gender. The label is the success of the offer for a customer (0=not successful; 1=successful). Four types of classifiers (dt: DecisionTreeClassifier; rf: RandomForestClassifier; log: LogisticRegression; mlp: MLPClassifier) were tuned for each offer using sklearn's GridSearchCV function. The **accuracy** scoring metric was optimized. The results for the **test set** are shown below:
+![Offer Classifier Comparison](images/offer_classifier_performance.png)
+
+The four classifiers show comparable performance on the test set for each of the offers. LogisticRegression falls behind on a couple of offers (989b and 2906), but holds the clear speed advantage. This study recommends DecisionTreeClassifier be used for all offers as it is slightly faster than RandomForestClassifier, much faster than MLPClassifier, but delivers comparable performance.
+
+It should be mentioned that **recall** was also tried as the scoring metric. In some instance, the RandomForestClassifier produced a score of 1 for some offers **even for the test set!** This was because it predicted success for all customers, which is clearly not desirable. Thus recall was replaced by accuracy - a more stringent metric.
+
+### Global Classifier <a name="global_classifier"></a> ###
+The offer classifiers developed above are able to predict a successful outcome for each of the ten offers. What if we want to predict success for a new offer: a bogo with difficulty=7, reward=7 and duration=6? A global classifier was developed with a feature set consisting of age, income, M, F, O, membership_year as before, plus offer parameters: bogo, informational, discount, difficulty, reward, duration. The label was, as before, cussess for the customer/offer combination. Naturally, the parameters for the new offer must be within the ranges of the parameters of the offers in the **profile** data set. And, admittedly, we don't have a test set of 'new" offers to tst against at this point.
+
+A DecisionTreeClassifier() was fit with hyperparameters tuned using GridSearchCV. The classifier achieved an accuracy of 0.69, which is considered acceptable. While the grid search maximized the accuracy, the other scoring metrics came out to be as follows:
+|Metric|Value|
+|--|--|
+|precsion|0.68|
+|recall|0.67|
+|f1|0.67|
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
 The following python packages are used:
