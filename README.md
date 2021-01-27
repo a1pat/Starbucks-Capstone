@@ -150,23 +150,24 @@ The overall success rates for each of the offers is shown below.
 
 Next, we will look in detail at how the offers did among different genders, age and income groups and year of membership. There are too many offers to examine in detail for each group; we will examine the most- and least-successful offers as we dive deeper.
 
-**Break down by gender**:
-![Gender breakdown](images/success_gender.png)
+| **Break down by gender**: |
+| :--- |
+| ![Gender breakdown](images/success_gender.png) |
 
-**Breakdown by gender and income**:
-![Gender Income breakdown](images/success_income_gender.png)
+| **Breakdown by gender and income**: |
+| :--- |
+| ![Gender Income breakdown](images/success_income_gender.png) |
 
-**Breakdown by gender and age**:
-![Gender Age breakdown](images/success_age_gender.png)
+| **Breakdown by gender and age**: |
+| :--- |
+| ![Gender Age breakdown](images/success_age_gender.png) |
 
-**Breakdown by membership year**:
-![Year breakdown](images/success_year.png)
-
-**Breakdown by cluster**:
-![Cluster breakdown](images/success_cluster.png)
+| **Breakdown by membership year**: |
+| :--- |
+| ![Year breakdown](images/success_year.png) |
 
 | **Breakdown by cluster**: |
-| ------ |
+| :------ |
 | ![Cluster breakdown](images/success_cluster.png) |
 
 
