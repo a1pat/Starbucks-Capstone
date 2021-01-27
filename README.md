@@ -188,6 +188,7 @@ The following, some of which have been noted above, could affect the perfoemance
 
 ### Offer Classifiers <a name="offer_classifiers"></a> ###
 A classifier was fit to each of the ten offers to predict whether the offer would be successful for each customer. The feature set consisted of age, income, M, F, O and membership year. M, F and O are categorical variables for the customer's gender. The label is the success of the offer for a customer (0=not successful; 1=successful). Four types of classifiers (dt: DecisionTreeClassifier; rf: RandomForestClassifier; log: LogisticRegression; mlp: MLPClassifier) were tuned for each offer using sklearn's GridSearchCV function. The **accuracy** scoring metric was optimized. The results for the **test set** are shown below:
+
 ![Offer Classifier Comparison](images/offer_classifier_performance.png)
 
 The four classifiers show comparable performance on the test set for each of the offers. LogisticRegression falls behind on a couple of offers (989b and 2906), but holds the clear speed advantage. This study recommends DecisionTreeClassifier be used for all offers as it is slightly faster than RandomForestClassifier, much faster than MLPClassifier, but delivers comparable performance.
