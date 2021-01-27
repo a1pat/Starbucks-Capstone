@@ -165,7 +165,8 @@ Next, we will look in detail at how the offers did among different genders, age 
 **Breakdown by cluster**:
 ![Cluster breakdown](images/success_cluster.png)
 
-
+| **Breakdown by cluster**: |
+| ![Cluster breakdown](images/success_cluster.png) |
 
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
