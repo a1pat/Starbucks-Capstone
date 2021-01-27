@@ -148,8 +148,9 @@ The **inertia** (sum of square of the distance from each point to its cluster ce
 The overall success rates for each of the offers is shown below.
 ![Success Rates](images/offer_success_rate.png)
 
-
-<img src="images/offer_success_rate.png" width="480"> | ![Success Rates Comments](images/offer_success_rate_comments.png)
+| first figure | second figure |
+|-------------|----------|
+| <img src="images/offer_success_rate.png" width="480"> | ![Success Rates Comments](images/offer_success_rate_comments.png) |
 
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
