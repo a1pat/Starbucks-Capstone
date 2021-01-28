@@ -8,8 +8,9 @@ This a Capstone project for the Udacity Datascience Nanodegree program.
 4. [Summary of Results](#summary_of_results)
 5. [File Descriptions](#file_descriptions)
 6. [Libraries/Packages](#libraries_packages)
-7. [Acknowledgement](#acknowledgement)
-8. [Author](#author)
+7. [Instructions for Use](#instructions_for_use)
+8. [Acknowledgement](#acknowledgement)
+9. [Author](#author)
 
 A detailed analysis and results can be found [here](https://ashutosh-patwardhan.medium.com/free-cappuccino-anyone-55c3dd5af).
 
@@ -54,6 +55,11 @@ The following python packages are used:
 4. matplotlib
 5. tqdm
 6. sklearn
+
+## Instructions for Use<a name="instructions_for_use"></a> ##
+1. Download all the files in the [File Descriptions](#file_descriptions) section to your computer preserving the folder structure;
+2. Unzip the **transcript.zip** file. You should now have a **transcript.json** file in your **data** folder.
+3. Open the **Starbucks_Capstone_notebook.ipynb** file. There is a variable called **read_saved_categorization** in the second code cell. Make sure this variable is set to **False** the first time you read the notebook. This will cause some time-consuming calculations to be run the first time. Intermediate results from these time-consuming calculations (specifically, the **df_all_person_offer** pandas data frame) will be stored to a file named **df_all_person_offer.pkl** in the same folder as the notebook. For subsequent runs, the **read_saved_categorization** variable can be set to **True**. This will cause the intermediate results to be read from the pickle file instead of re-running the time-consuming calculations, thus saving time. Of course, if you make changes to the notebook that affect the intermediate results (**df_all_person_offer**), you will need to set the **read_saved_categorization** variable to **False** for the next run.
 
 ## Acknowledgement<a name="acknowledgement"></a> ##
 [Udacity](http://www.udacity.com) provided the Starbucks data files (portfolio.json; profile.json; transcript.json).
