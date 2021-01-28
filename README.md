@@ -7,7 +7,7 @@ This a Capstone project for the Udacity Datascience Nanodegree program.
 3. [Summary of Analysis](#summary_of_analysis)
 4. [Summary of Results](#summary_of_results)
 5. [File Descriptions](#file_descriptions)
-6. [Libraries](#libraries)
+6. [Libraries/Packages](#libraries_packages)
 7. [Acknowledgement](#acknowledgement)
 8. [Author](#author)
 
@@ -37,7 +37,14 @@ This project seeks to answer the following specific questions:
 
 ## File Descriptions<a name="file_descriptions"></a> ##
 The following files and folders are in the root folder:
-* 
++ **data** (folder)
+    + **portfolio.json**: offer data.
+    + **profile.json**: customer demographic data.
+    + **transcript.zip**: transcript data in json format, zipped due to GitHub file size limitations. Unzip this file before use.
++ **README.md**: this file.
++ **Starbucks_Capstone_notebook.ipynb**: python code for the entire analysis.
++ **pic1.png**: image inserted into Starbucks_Capstone_notebook.ipynb.
++ **pic2.png**: image inserted into Starbucks_Capstone_notebook.ipynb.
 
 ## Libraries/Packages<a name="libraries_packages"></a> ##
 The following python packages are used:
